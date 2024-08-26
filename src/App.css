@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  padding: 10px;
+}
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+}
+.logouIcon{
+  position: relative;
+  left: 9px;
+  top: 11rem;
+  font-size: 18px;
+  color: rgb(193, 32, 32);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Sidebar */
+.sidebar {
+  background: white;
+  color: black;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid rgb(85, 82, 82);
+  width: 300px;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: .2px solid rgb(148, 148, 148);;
+}
+
+.logo {
+  font-size: 18px;
+  line-height: 0;
+}
+.hide {
+  display: none;
+
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
+}
+
+.search input {
+  border: none;
+  margin-left: 5px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+  color: black;
+}
+
+.routes {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+ border: 0.2px solid rgb(110, 110, 110);
+ border-top: 0;
+ width: 45px;
+ height: 34rem;
+}
+
+.link {
+  display: flex;
+  color: black;
+  gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.link:hover {
+  border-right: 4px solid white;
+  background: rgb(247, 246, 246);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.active {
+  border-right: 4px solid white;
+  background: rgb(211, 212, 219);
+}
+
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.menu {
+  display: flex;
+  color: black;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  justify-content: space-between;
+}
+
+.menu:hover {
+  background: rgb(247, 246, 246);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.active {
+  border-right: 4px solid white;
+  background: rgb(232, 230, 230);
+}
+
+.menu_item {
+  display: flex;
+  gap: 10px;
+}
+
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_container .link {
+  padding-left: 20px;
+  border-bottom: #fff 0.5px solid;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.icon{
+  font-size: 18px;
+}
+
+/* Profile Status Check login and Account Details */
+.profile {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2px;
+  margin-top: 5px;
+  position: fixed;
+  right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.profile img {
+  width: 35px;
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logoDetails {
+  background: white;
+  position: relative;
+  top: 42px;
+  padding: 5px;
+  width: 130px;
+  font-size: 12px;
+  box-shadow: 7px 7px 10px -1px rgba(0, 0, 0, 0.31);
+  border: .2px solid rgb(148, 148, 148);
+  font-weight: 400;
+  gap: 10px;
+}
+
+.logoDetails ul li span {
+  margin: 0px 5px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  font-size: 11px;
+}
+
+.item:hover {
+  background: rgb(247, 246, 246);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.item .log {
+  font-size: 18px;
+}
+
+.item .logout-btn {
+  color: rgb(196, 88, 88);
+}
+
+.menu_container {
+  position: absolute;
+  left: 48px;
+  top: 70px;
+  width: auto;
+  display: flex;
+}
+
+.link {
+  border-radius: 7px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo img {
+  height: 30px;
+}
+
+
+
+.item{
+  display: flex;
+  flex-direction: row;
+}
+.item img{
+  width: 28px;
+  border-radius: 50%;
+}
+.profile-details{
+  display: flex;
+  flex-direction: column;
+  font-size: 10pX
 }
