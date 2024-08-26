@@ -65,21 +65,7 @@ const SidebarMenu = ({ route, showAnimation, isOpen, setIsOpen }) => {
               
             )}
           </AnimatePresence>
-        </div>
-        {isOpen && (
-          <motion.div
-            animate={
-              isMenuOpen
-                ? {
-                    rotate: -90,
-                  }
-                : { rotate: 0 }
-            }
-          >
-           
-          </motion.div>
-        )}
-        
+        </div>        
       </div>{" "}
       <AnimatePresence  >
         {isMenuOpen && (

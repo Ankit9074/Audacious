@@ -241,3 +241,15 @@ main {
   flex-direction: column;
   font-size: 10pX
 }
+
+@media only screen and (max-width: 600px) {
+
+  .main-container .icon{
+    font-size: 15px;
+  }
+  .container{
+    width: 390px;
+    height: 581px;
+  }
+
+}
